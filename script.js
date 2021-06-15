@@ -58,7 +58,7 @@ function verificarPaciente(){
     }
   if (pacientes.length==0){
     registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña);
-    alert("Registro exitoso, por favor inice sesion");
+    //alert("Registro exitoso, por favor inice sesion");
     document.location.href="login.html";
 
   }
