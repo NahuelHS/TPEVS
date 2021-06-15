@@ -2,7 +2,7 @@
 
 var pacientes=[]; // Toda la lista de pacientes registrados
 var contXLogIn;
-
+//
 
 function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña){
   var newUser ={
