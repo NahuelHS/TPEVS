@@ -244,7 +244,7 @@ function validacionEmail(email,contraseña){
             mensaje.innerHTML=mensajesError.join(", ");
          pacientes[i].contLogIn++;
          
-         if(pacientes[i].contLogIn>5){
+         if(pacientes[i].contLogIn>4){
           
            bloquearUsuario();
            return false;
