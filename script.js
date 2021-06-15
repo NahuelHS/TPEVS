@@ -4,7 +4,7 @@ var pacientes=[]; // Toda la lista de pacientes registrados
 var contXLogIn;
 
 
-function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nroTarj,email,contraseña){
+function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña){
   var newUser ={
     nombre: nombre,
     apellido: apellido,
@@ -12,7 +12,7 @@ function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nro
     fechaNac: fechaNac,
     planMed:planMed,
     coberturaMed: coberturaMed,
-    nroTarj:nroTarj,
+    
     email: email,
     contraseña: contraseña,
     contLogIn:0 //Para contar los intentos de logueos erroneos
