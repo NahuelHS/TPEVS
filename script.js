@@ -260,7 +260,7 @@ function validacionEmail(email,contraseña){
     mensaje.innerHTML=mensajesError.join(", ");
   return false;
 }
-
+//
 function bloquearUsuario(){
   document.location.href="bloqueado.html";
 }
