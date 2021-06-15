@@ -4,7 +4,7 @@ var pacientes=[]; // Toda la lista de pacientes registrados
 var contXLogIn;
 
 
-function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nroTarj,email,contraseña){
+function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña){
   var newUser ={
     nombre: nombre,
     apellido: apellido,
@@ -12,7 +12,7 @@ function registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nro
     fechaNac: fechaNac,
     planMed:planMed,
     coberturaMed: coberturaMed,
-    nroTarj:nroTarj,
+    
     email: email,
     contraseña: contraseña,
     contLogIn:0 //Para contar los intentos de logueos erroneos
@@ -32,13 +32,13 @@ function verificarPaciente(){
   var fechaNac=document.getElementById("fechaid").value;
   var planMed=document.getElementById("planid").value;
   var coberturaMed=document.getElementById("coberturaid").value;
-  var nroTarj=document.getElementById("tarjetaid").value;
+  
   var email=document.getElementById('emailid').value;
   var contraseña=document.getElementById('contraseñaid').value;
 
  pacientes=getUsuarios();
 
- if (verificacionCampos(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nroTarj,email,contraseña)){
+ if (verificacionCampos(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña)){
 
 
    for(var i=0;i<pacientes.length;i++){
@@ -49,7 +49,7 @@ function verificarPaciente(){
        
      }else{
        if(i== pacientes.length-1 && pacientes.length!=0){
-       registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nroTarj,email,contraseña);
+       registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña);
        i=pacientes.length;
        alert("Registro exitoso, por favor inice sesion");
        document.location.href="login.html";
@@ -57,7 +57,7 @@ function verificarPaciente(){
        }
     }
   if (pacientes.length==0){
-    registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nroTarj,email,contraseña);
+    registrarPaciente(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña);
     alert("Registro exitoso, por favor inice sesion");
     document.location.href="login.html";
 
@@ -83,7 +83,7 @@ function getUsuarios(){
   return pacientes;
 }
 
-function verificacionCampos(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nroTarj,email,contraseña){
+function verificacionCampos(nombre,apellido,dni,fechaNac,planMed,coberturaMed,email,contraseña){
 
   var soloLetras = /^[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]+$/;
   var soloNum=/^\d*$/;
@@ -124,15 +124,7 @@ function verificacionCampos(nombre,apellido,dni,fechaNac,planMed,coberturaMed,nr
     alert("DNI invalido");
     return false;
   }
-  //Tarjeta de credito
-  if(nroTarj.length!=16){
-    alert("Nro de tarjeta Invalido");
-    return false;
-  }
-  if(!soloNum.test(nroTarj)){
-    alert("Nro de tarjeta invalido");
-    return false;
-  }
+ 
   //Fecha
   
   if( !isNaN(fechaNac) ) {
