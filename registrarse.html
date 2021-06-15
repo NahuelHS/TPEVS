@@ -12,13 +12,21 @@
 
 </head>
 <body>
+    
+
+
+    
+
+
     <form class="formulario">
+       
+
 
         <h1>Registro de Paciente</h1>
         <div class="contenedor">
             <div class="input-contenedor"></div>
                <i class="fas fa-user icon"></i>
-               <input type="text" placeholder="Ingrese Nombre" id="nombreid" required>
+               <input type="text" placeholder="Ingrese Nombre" id="nombreid" required pattern=/^[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]+$/>
             
            <div class="input-contenedor"></div>
                <i class="fas fa-user icon"></i>
@@ -42,7 +50,11 @@
                <i class="fas fa-user icon"></i>
                
                <input type="text" placeholder="Ingrese Tipo de Plan Medico" id="planid">
-         
+         <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               
+               <input type="text" placeholder="Ingrese Nro de Tarejta de Credito" id="tarjetaid">
+
             <div class="input-contenedor"></div>
                <i class="fas fa-envelope icon"></i> 
                <input type="email" placeholder="Ingrese Correo Electronico" id="emailid"> 
@@ -50,11 +62,11 @@
             <div class="input-contenedor"></div>
                <i class="fas fa-key icon"></i>
                <input type="password" placeholder="Ingrese Contraseña de 8 caracteres" id="contraseñaid"> <br>
-              <div id="error"></div>
+               <div id="error"></div>
             <button type="button"  class="button" id="boton" onclick="verificarPaciente();" id="btnRegistrar">Registrarse</button><br>
                
                
-            <p>Ya tienes cuentaa? <a class="link" href="login.html"> Iniciar Sesion </a></p>
+            <p>Ya tienes cuenta? <a class="link" href="login.html"> Iniciar Sesion </a></p>
 
 
         </div>
