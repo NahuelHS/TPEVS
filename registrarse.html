@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos.css">
+
+    
+
+
+</head>
+<body>
+    <form class="formulario">
+
+        <h1>Registro de Paciente</h1>
+        <div class="contenedor">
+            <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               <input type="text" placeholder="Ingrese Nombre" id="nombreid" required>
+            
+           <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               <input type="text" placeholder="Ingrese Apellido" id="apellidoid" required>
+            
+           <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               <input type="text" placeholder="Ingrese DNI. Ej:10123456" id="dniid">
+               
+            <div class="input-contenedor"></div>
+           
+               <i class="fas fa-user icon"></i>
+               <td><b>Fecha de Nacimiento</b></td>
+               <input type="date" placeholder="Ingrese Fecha de Nacimiento" id="fechaid">
+
+            <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               <input type="text" placeholder="Ingrese Cobertura Medica" id="coberturaid">
+
+            <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               
+               <input type="text" placeholder="Ingrese Tipo de Plan Medico" id="planid">
+         <div class="input-contenedor"></div>
+               <i class="fas fa-user icon"></i>
+               
+               <input type="text" placeholder="Ingrese Nro de Tarejta de Credito" id="tarjetaid">
+
+            <div class="input-contenedor"></div>
+               <i class="fas fa-envelope icon"></i> 
+               <input type="email" placeholder="Ingrese Correo Electronico" id="emailid"> 
+
+            <div class="input-contenedor"></div>
+               <i class="fas fa-key icon"></i>
+               <input type="password" placeholder="Ingrese Contraseña de 8 caracteres" id="contraseñaid"> <br>
+
+            <button type="button"  class="button" id="boton" onclick="verificarPaciente();" id="btnRegistrar">Registrarse</button><br>
+               
+               
+            <p>Ya tienes cuenta? <a class="link" href="login.html"> Iniciar Sesion </a></p>
+
+
+        </div>
+
+        
+        
+
+    </form>
+    
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
